@@ -1,0 +1,42 @@
+const baseURL = require("./src/tools/baseURL")
+module.exports={
+    publicPath:'/',
+    outputDir:'dist',
+    indexPath:"index.html",
+    pages:{
+    index:{
+    //page的入口
+    entry:'src/main.js',
+    //模板来源
+    template:'public/index.html',
+    //在dist/index.html的输出
+    filename:'index.html',
+    //当使用title选项时，
+    //template中的title标签需要是<title><%=htmlWebpackPlugin.options.title%></title>
+    title:'shopping'
+    }
+    },
+    //配置服务器
+    devServer:{
+    //启用压缩，代码占的空间少，在互联网传输快
+    compress:true,
+    port:9000,
+    host:'0.0.0.0',
+    hot:true,//启用热启动。
+    open:true,//默认第一次运行时调起浏览器打开项目
+    //服务器代理
+    proxy:{//配置跨域
+    ///api接口的前缀
+    '/myApi':{
+    target:baseURL+'/api',//接口地址
+    ws:true,//是否启用websockets
+    changOrigin:true,//允许跨域Origin源127.0.0.1:9000
+    pathRewrite:{
+    '^/myApi':''//请求的时候使用这个api就可以
+    }
+    },
+    
+    }
+    }
+    }
+    
