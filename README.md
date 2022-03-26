@@ -27,3 +27,5 @@ npm run serve
 # build for production with minification
 npm run build
 
+#node服务器 https://github.com/YuanCodess/shops_node
+
