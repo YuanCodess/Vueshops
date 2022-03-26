@@ -10,6 +10,8 @@ vuex + webStorage 实现了添加购物车功能,axios拦截,配合路由钩子�
 
 ![](./static/home.png)   ![](./static/list.png)    ![](./static/shops.png)
 
+## node服务器 
+https://github.com/YuanCodess/shops_node
 
 ## 待完成
 
@@ -27,6 +29,4 @@ npm run serve
 # build for production with minification
 npm run build
 
-#node服务器 https://github.com/YuanCodess/shops_node
 
-# ss分支修改内容
